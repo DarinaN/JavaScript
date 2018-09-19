@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>Приклади завдань з вивчення JavaScript</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="b1">
+
+
+<div id="b2"><h1>Приклади завдань з вивчення JavaScript</h1>
+            <img src="photo.jpg" width="350" height="200" alt="Логотип">
+</div>
+
+<div id="b3">
+<ol>
+<li><p><a href="dom.html">Завдання №1</a></p></li>
+<li><p><a href="ball.html">Завдання №2</a></p></li>
+<li><p><a href="key.html">Завдання №3</a></p></li>
+</ol>
+</div>
+
+<div id="b4">
+<h1>Отскакивающий мяч</h1>
+
+<canvas id="canvas" width="200" height="200"></canvas>
+<script>
+var Ball = function () {
+this.x = 100;
+this.y = 100;
+this.xSpeed = -2;
+this.ySpeed = 3;
+};
+
+var circle = function (x, y, radius, fillCircle) {
+ctx.beginPath();
+ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+if (fillCircle) {
+ctx.fill();
+} else {
+ctx.stroke();
+}
+};
+Ball.prototype.draw = function () {
+circle(this.x, this.y, 3, true);
+};
+
+Ball.prototype.move = function () {
+this.x += this.xSpeed;
+this.y += this.ySpeed;
+};
+
+Ball.prototype.checkCollision = function () {
+ if (this.x < 0 || this.x > 200) {
+this.xSpeed = -this.xSpeed;
+}
+ if (this.y < 0 || this.y > 200) {
+this.ySpeed = -this.ySpeed;
+}
+};
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ var ball = new Ball();
+ setInterval(function () {
+ ctx.clearRect(0, 0, 200, 200);
+ ball.draw();
+ball.move();
+ball.checkCollision();
+ ctx.strokeRect(0, 0, 200, 200);
+ }, 30);
+</script>
+
+<p>Теперь давайте изобразим летающий по «холсту» мяч. При столкнове-
+нии с одной из границ он будет отскакивать назад, меняя направление,словно резиновый.
+Мы создадим для нашего мяча JavaScript-объект, написав для этого
+конструктор Ball. Объект будет хранить скорость мяча и направ-
+ление его движения с помощью двух свойств, xSpeed и ySpeed.
+Горизонтальная скорость мяча будет определяться значением xSpeed,
+а вертикальная — ySpeed.
+Создайте для этой анимации файл под названием ball.html и добавьте
+в него следующий HTML-код:</p>
+<p><img src="b.jpg" width="350" height="200" "></p>
+<p>Введите следующий код между тегов
+ script  в файле ball.html:</p>
+<p><img src="c.jpg" width="350" height="300" "></p>
+<p><img src="d.jpg" width="350" height="300" "></p>
+</div>
+
+<div id="b5">&copyНестерчук Дарина</div>
+
+</div>
+</body>
+</html>

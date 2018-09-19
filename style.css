@@ -1,0 +1,19 @@
+﻿div  {border: 3px solid #386f00;
+      margin: 5px;
+      background-color:#00db00;
+      }
+#b1  {background-color:#00db00;
+}
+#b2  {background-color: #00db00;
+      
+      
+     }
+#b3  {width: 35%;
+      float: left; 
+      font-style: italic;
+     }
+#b4  {width: 60%;
+      float: left;
+      }
+#b5  {clear: both;
+     }

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Приклади завдань з вивчення JavaScript</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="b1">
+
+
+<div id="b2"><h1>Приклади завдань з вивчення JavaScript</h1>
+            <img src="photo.jpg" width="350" height="200" alt="Логотип">
+</div>
+
+<div id="b3">
+<ol>
+<li><p><a href="dom.html">Завдання №1</a></p></li>
+<li><p><a href="ball.html">Завдання №2</a></p></li>
+<li><p><a href="key.html">Завдання №3</a></p></li>
+</ol>
+</div>
+
+<div id="b4">
+<h2>Изучаем DOM</h2>
+<h1 id="main-heading">Привет, мир!</h1>
+<script>
+ var headingElement = document.getElementById("main-heading");
+ console.log(headingElement.innerHTML);
+ var newHeadingText = prompt("Введите новый заголовок:");
+ headingElement.innerHTML = newHeadingText;
+</script>
+<p>Вот пример того, как менять текст заголовка с помощью DOM. Давайте
+создадим новый HTML-документ dom.html со следующим кодом:
+<p><img src="a.jpg" width="350" height="350"></p>
+<p>В строке (1) мы с помощью document.getElementById
+нашли элемент h1 (id которого равен «main-heading»)
+и сохранили его в переменной headingElement. В стро-
+ке (2) мы вывели в консоль строку, возвращенную вызовом
+headingElement.innerHTML — то есть "Привет, мир!".
+В строке (3) открыли диалог prompt, чтобы получить
+от пользователя новый заголовок, и сохранили введенный
+пользователем текст в переменной newHeadingText. И наконец,
+в строке (4) присвоили сохраненное в newHeadingText значение свой-
+ству innerHTML элемента headingElement.</p>
+
+
+</div>
+
+<div id="b5">&copyНестерчук Дарина</div>
+
+</div>
+</body>
+</html>
